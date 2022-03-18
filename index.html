@@ -1,78 +1,58 @@
-<html manifest="offlinexmb.manifest">
-<title>Karo host GoldHEN 755 FW</title>
+<html>
+<head>
 <meta charset="utf-8">
-	<style>
-        .switch {
-		  position: relative;
-		  display: inline-block;
-		  width: 60px;
-		  height: 34px;
-		}
-
-		.switch input { 
-		  opacity: 0;
-		  width: 0;
-		  height: 0;
-		}
-
-		.slider {
-		  position: absolute;
-		  cursor: pointer;
-		  top: 0;
-		  left: 0;
-		  right: 0;
-		  bottom: 0;
-		  background-color: #2196F3;
-		  -webkit-transition: .4s;
-		  transition: .4s;
-		}
-		
-		.slider.new {
-		  position: absolute;
-		  cursor: pointer;
-		  top: 0;
-		  left: 0;
-		  right: 0;
-		  bottom: 0;
-		  background-color: #585858;
-		  -webkit-transition: .4s;
-		  transition: .4s;
-		}
-
-		.slider:before {
-		  position: absolute;
-		  content: "";
-		  height: 26px;
-		  width: 26px;
-		  left: 4px;
-		  bottom: 4px;
-		  background-color: white;
-		  -webkit-transition: .4s;
-		  transition: .4s;
-		}
-
-		input:checked + .slider {
-		  background-color: #2196F3;
-		}
-
-		input:focus + .slider {
-		  box-shadow: 0 0 1px #2196F3;
-		}
-
-		input:checked + .slider:before {
-		  -webkit-transform: translateX(26px);
-		  -ms-transform: translateX(26px);
-		  transform: translateX(26px);
-		}
-
-		/* Rounded sliders */
-		.slider.round {
-		  border-radius: 34px;
-		}
-
-		.slider.round:before {
-		  border-radius: 50%;
-		}
+<title>محمود ابورجب لصيانة جميع الاجهزة 01111371168 505 & 672 & 702 & 75X & 900</title>
+<style type="text/css">
+body {
+  background-color: #1A1920;  
+  background-repeat:no-repeat;
+  height:100%;
+ }
+ button {
+            background:rgba(0,0,0,0.5);
+		    box-shadow: 0 5px 20px 0 white;
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 170px;
+            height: 40px;            
+            text-align: center;
+            padding: 6px;
+            margin: 6px;
+}
+button:hover {
+            box-shadow: 0 5px 50px 0 white;
+            background-color: #0F0F53;
+            color: white;
+            border-radius: 10px;
+}
+#clock{
+ float:right;
+ margin-right:2.25%;
+ margin-top: 18px;
+ font-weight:bold;
+ font-size:28px;
+  color: white;
+}
+#date {
+ float:left;
+ margin-left:1.25%;
+ font-weight:bold;
+ margin-top: 18px;
+ font-size:28px;
+ color: white;
+}
+ .content {
+  width:80%;
+  margin-left:7.5%;
+  background:rgba(0,0,0,0.5);
+  color:white;
+  margin-top:1%;
+  font-size:25px;
+  text-align:center;
+  border-radius:30px;
+  padding:20px;
+  line-height:35px;
+ }
  .title {
   font-size:40px;
   margin:0;
@@ -80,6 +60,60 @@
   box-sizing:border-box;
   font-weight:bolder;
   margin-bottom:10px;
+ }
+ .yellow {
+  color:yellow;
+ }
+ .hue {
+  color:yellow;
+  padding:10px;
+  border-radius:10px;
+  animation:hue 5s linear infinite;
+  -webkit-animation: hue 5s linear infinite;
+  box-shadow: 0px 0px 50px yellow;
+  color:white;
+  background:rgba(255,255,0,0.4);
+ }
+ .hue:hover{
+  color:yellow;
+  background:transparent;
+ }
+ @keyframes hue{
+ 0%{
+ filter:hue-rotate(0deg);
+ -webkit-filter:hue-rotate(0deg);
+ }
+ 10%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 20%{
+ box-shadow: 1px 1px 50px yellow;
+ }
+ 30%{
+ box-shadow: 1px 0px 50px yellow;
+ }
+ 40%{
+  box-shadow: 1px -1px 50px yellow;
+ }
+ 50%{
+ box-shadow: 0px -1px 50px yellow;
+ }
+ 60%{
+ box-shadow: -1px -1px 50px yellow;
+ }
+ 70%{
+ box-shadow: -1px 0px 50px yellow;
+ }
+ 80%{
+ box-shadow: -1px 1px 50px yellow;
+ }
+ 90%{
+ box-shadow: 0px 1px 50px yellow;
+ }
+ 100%{
+ filter:hue-rotate(360deg);
+ -webkit-filter:hue-rotate(360deg);
+ }
  }
  .text {
   padding-bottom:50px;
@@ -102,45 +136,64 @@
    box-sizing:border-box;
    color:white;
   }
-.titleheadx {
-		  background-color: #1A1920;  
-		  border-radius: 5px;
-		  color: white;
-		  padding: .5em;
-		  text-decoration: none;
-		  text-align: center;
-		  margin-top: 17%;
-		  margin-bottom: -10px;
-		  font-family: system-ui;
-}
-
-		.bg {
-		  /* The image used */
-		  background-color:#1A1920;
-		  font-family: system-ui;
-		  /* Center and scale the image nicely */
-		  background-position: center;
-		  background-repeat: no-repeat;
-		  background-size: cover;
-		}
-
-       #Progress {
-		  color: white;
-		}
-
-       #Progressx {
-		  color: white;
-		}
-	</style>
-	<body onload="go()" class="bg">
-	    <script>
-		    if(window.applicationCache.status==2){localStorage.isgoldCached=true;}
-			window.applicationCache.ondownloading=function(){document.getElementById("progressx").innerHTML="Page Caching Started!!";localStorage.isgoldCached=false;};
-			window.applicationCache.onprogress=function(a){document.getElementById("progressx").innerHTML=(Math.round(100*(a.loaded/a.total)))+"%";};
-			window.applicationCache.oncached=function(){document.getElementById("progressx").innerHTML="Page Cached Successfully!!";localStorage.isgoldCached=true;setTimeout(function(){document.getElementById("progressx").innerHTML="Reopen the Page !!"; }, 1500);};
-			window.applicationCache.onnoupdate=function(){window.location.replace("lndex.html");};
-        	window.applicationCache.onerror=function(){window.location.replace("lndex.html");};
-		</script>
-        <h1 id="progressx" class="titleheadx" style="font-size:35px;text-align:center;text-shadow: 4px 4px 4px black;color:yellow;display:'none'">Loading ...</h1>
-	</body>
+  .pointer {cursor: pointer;}
+</style>
+<script>
+    function showdate() {
+  var dt = new Date();
+    Hour= dt.getHours();
+  Minute= dt.getMinutes();
+     Day=dt.getDate();
+   Month=dt.getMonth()+1;
+   Year=dt.getFullYear();
+if (Minute < 10) { Minute = "0" + Minute; };
+if (Hour < 10) { Hour = "0" + Hour; };
+document.getElementById("date").innerHTML = (Day+"/"+Month+"/"+Year);
+document.getElementById("clock").innerHTML = (Hour+":"+Minute);
+  }
+  
+  setInterval(showdate,0);
+</script>
+</head>
+<body class="bg-darker">
+<div id="container"  style="">
+<span id="date" ></span><span id="clock" ></span><h1 style='font-size:25px;text-align:center;color:yellow;'>محمود ابورجب لصيانة جميع الاجهزة 01111371168 505 & 672 & 702 & 75X & 900</h1>
+<h1 id=msgs2 style='font-size:25px;text-align:center;color:white;'>Status</h1>
+<div style="text-align:center"  id="MyItems">
+<a href="binloader/index.html"><button style='width: 200px;height: 40px;font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Binloader For 505 & 672 & 702 & 755'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Binloader </B></button></a><br>
+<a href="505N/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='New Karo Host For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>5.05N</B></button></a>
+<a href="505/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 505'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>5.05 old</B></button></a><br>
+<a href="672/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72 </B></button></a>
+<a href="672A/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72A </B></button></a>
+<a href="672L/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Light For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72L</B></button></a>
+<!--<a href="672N/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host New Exploit and Loader For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72N </B></button></a>
+<a href="672NA/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host with all payloads on New Exploit and Loader For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72NA</B></button></a>
+<a href="672Mix/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host with Mix old and new Exploit For 672'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>6.72Mix</B></button></a>
+<a href="702d/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit For 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02d</B></button></a>
+<a href="755A/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host old and new For 75X'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55A</B></button></a>--><br>
+<a href="702N/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo New Host Auto Exploit For 702'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02N</B></button></a>
+<a href="702L/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 702 Lite version'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02L</B></button></a>
+<a href="http://karo218.ir/702Gold/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.02Gold</B></button></a><br>
+<a href="755/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit For 75X'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55</B></button></a>
+<a href="755L/index.html"><button style='font-size:22px;text-align:center;color:white' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 75X Lite version'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55L</B></button></a>
+<a href="http://karo218.ir/755Gold/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>7.55Gold</B></button></a><br>
+<a href="900N/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Manual Exploit For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00N</B></button></a>
+<a href="900NA/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit For 9.00 '"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00NA</B></button></a>
+<a href="900L/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto Exploit Light For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00L</B></button></a>
+<a href="http://karo218.ir/900/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>9.00Gold</B></button></a>
+<a href="Goldhen900/index.html"><button style='font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Karo Host Auto exploit and auto Goldhen 2.1.2 For 9.00'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Goldhen900</B></button></a>	
+<br>
+<a href="restore/index.html"><button style='width: 300px;height: 60px;font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Restore Host to Users Guide by Karo'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Restore Host</B></button></a>
+<a href="restore2/index.html"><button style='width: 300px;height: 60px;font-size:22px;text-align:center;color:yellow' class="pointer" onMouseOver="msgs2.innerHTML='Restore PS4Trainer Offline to Users Guide by Karo For 505 & 672 & 702 & 755 & 900'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>Restore PS4Trainer</B></button></a>
+<br>
+<a href="http://karo218.ir/PS4TRAINER/index.html"><button style='width: 470px;height: 60px;font-size:22px;text-align:center;background-color:#0B0B61;color:white' class="pointer" onMouseOver="msgs2.innerHTML='PS4Trainer Offline from server 1 (Karo)'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (28.02.2022) server 1</B></button></a>
+<a href="http://85.214.115.33/index.html"><button style='width: 470px;height: 60px;font-size:22px;text-align:center;background-color:#0B0B61;color:white' class="pointer" onMouseOver="msgs2.innerHTML='PS4Trainer Offline from server 2 (DNS)'"; onmouseout="msgs2.innerHTML='Status'"  type="button"><B>PS4Trainer Offline (28.02.2022) server 2</B></button></a><br>
+<br>
+<div class="content" >
+ 	<div class="text" >
+ 	 <br><span class="yellow" >Designed, Ported and Compiled by :</span >&nbsp;&nbsp; <span class="hue" >محمود ابورجب </span>
+ 	</div>
+ </div>
+</div>
+</body>
 </html>
